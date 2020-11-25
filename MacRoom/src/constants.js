@@ -6,5 +6,11 @@ export const FONT_FAMILIES = {
 export const MEDIA_QUERIES = {
   SMALL: "520px",
   MEDIUM: "980px",
-  LARGE: "1200px"
+  LARGE: "1200px",
+}
+
+export const COLORS = {
+  BLACK: "#322f2f",
+  WHITE: "#fcfbfb",
+  HOVERBLACK: "#6c6a6a",
 }
