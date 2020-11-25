@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import { Container, Image } from "./pageStyles/pageStyles"
+import { Container, Image, Product } from "./pageStyles/pageStyles"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
@@ -26,6 +26,7 @@ const IndexPage = () => {
         homePageFeaturedProducts {
           ... on WPGraphql_Mac {
             id
+            slug
             product {
               productName
               productProcessor
@@ -71,6 +72,18 @@ const IndexPage = () => {
         <div className="inner-div">
           <p className="header-title">{homePageTitle}</p>
           <p className="header-description">{homePageDescription}</p>
+        </div>
+      </div>
+      <div className="products">
+        <div className="product-items">
+        {homePageFeaturedProducts.map(({product, slug}) => (
+          <Product to={`/${slug}`}>
+          <Image fluid={product.productImage.imageFile.childImageSharp.fluid} alt={product.productImage.altText} />
+            <div className="product-info">
+              <h3>{product.productName}</h3>
+            </div>
+          </Product>
+        ))}
         </div>
       </div>
       </Container>

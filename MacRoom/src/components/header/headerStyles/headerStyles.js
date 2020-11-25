@@ -39,7 +39,7 @@ export const MenuList = styled.ul`
       text-decoration: none;
       padding: 1rem;
       font-family: ${FONT_FAMILIES.TITLE};
-      font-size: 35px;
+      font-size: 30px;
       white-space: nowrap;
       color: ${COLORS.BLACK};
       animation-duration: 3s;
