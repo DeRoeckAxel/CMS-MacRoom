@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Raleway`, `Nerko One`],
+        fonts: [`Raleway`, `Nerko One`, `Helvetica`],
         display: "swap",
       },
     },

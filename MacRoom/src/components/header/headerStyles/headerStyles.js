@@ -8,7 +8,7 @@ export const Image = styled(Img)`
 
 export const HeaderWrapper = styled.header`
   display: flex;
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -16,7 +16,8 @@ export const HeaderWrapper = styled.header`
   justify-content: space-around;
   align-items: center;
   z-index: 100;
-  background-color: ${COLORS.WHITE}; 
+  background-color: ${COLORS.WHITE};
+  opacity: 0.85;
   a {
     display: flex;
     text-align: center;
