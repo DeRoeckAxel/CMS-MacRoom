@@ -1,9 +1,10 @@
 import Img from "gatsby-image"
 import {Link} from "gatsby"
 import styled from "styled-components"
-import { COLORS, FONT_FAMILIES, MEDIA_QUERIES } from "../../constants.js"
+import { COLORS, FONT_FAMILIES } from "../../constants.js"
 
 export const Container = styled.div`
+
 h1 {
   font-family: ${FONT_FAMILIES.TITLE};
   font-size: 2rem;

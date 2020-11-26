@@ -1,4 +1,42 @@
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
+const path = require("path")
+
+exports.createPages = ({graphql, actions}) => {
+  const {createPage} = actions;
+  return graphql(`
+    {
+      wpcontent {
+        macs {
+          edges {
+            node {
+              slug
+              id
+            }
+          }
+        }
+      }
+    }
+    `).then(result => {
+      if (result.errors) {
+        result.errors.forEach(e => console.error(e.toString()))
+        return Promise.reject(result.errors);
+      }
+
+      const macs = result.data.wpcontent.macs.edges;
+      macs.forEach(mac => {
+        const id = mac.node.id;
+        const slug = mac.node.slug;
+        createPage({
+          path: slug,
+          component: path.resolve(`src/templates/product.js`),
+          context: {
+            id,
+            slug,
+          }
+        })
+      })
+    })
+}
 
 /* Aan de hand van dit stukje code worden de images vanuit WPgraphql omgezet tot images waarop Gatsby image optimization kan toepassen */
 exports.createResolvers = async ({

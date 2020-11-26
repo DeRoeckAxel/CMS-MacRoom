@@ -1,6 +1,6 @@
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { COLORS, FONT_FAMILIES, MEDIA_QUERIES } from "../../../constants.js"
+import { COLORS, FONT_FAMILIES } from "../../../constants.js"
 
 export const Image = styled(Img)`
   margin: auto 0;
