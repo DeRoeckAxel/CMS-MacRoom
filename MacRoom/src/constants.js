@@ -1,6 +1,5 @@
 export const FONT_FAMILIES = {
   TITLE: "Raleway",
-  TEXT: "Nerko One",
   INFO: "Helvetica",
 }
 

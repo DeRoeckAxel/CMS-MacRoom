@@ -127,10 +127,6 @@ box-shadow: 0px -1px 9px 3px rgba(0,0,0,0.55);
 display: inline-block;
 transition: transform 0.3s ease-in-out;
 overflow: hidden;
-border-radius: 20px;
-Img {
-  border-radius: 20px;
-}
 
 &:hover {
   transform: scale(1.05);
