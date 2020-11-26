@@ -77,7 +77,7 @@ const IndexPage = () => {
       <div className="products">
         <div className="product-items">
         {homePageFeaturedProducts.map(({product, slug}) => (
-          <Product to={`/${slug}`}>
+          <Product to={`/${slug}`} key={slug}>
           <Image fluid={product.productImage.imageFile.childImageSharp.fluid} alt={product.productImage.altText} />
             <div className="product-info">
               <h3>{product.productName}</h3>

@@ -4,6 +4,13 @@ import styled from "styled-components"
 import { COLORS, FONT_FAMILIES, MEDIA_QUERIES } from "../../constants.js"
 
 export const Container = styled.div`
+h1 {
+  font-family: ${FONT_FAMILIES.TITLE};
+  font-size: 2rem;
+  margin: 20px;
+  font-weight: 100;
+  text-align: center;
+}
   .banner {
     width: 100%;
     display: flex;
@@ -20,7 +27,6 @@ export const Container = styled.div`
       font-weight: 100;
       font-family: ${FONT_FAMILIES.TITLE};
       border-radius: 20px;
-      background-color: rgba(0,0,0,0.3);
 
       p {
         color: ${COLORS.WHITE};
@@ -70,6 +76,60 @@ top: -200px;
 box-shadow: 0px -1px 9px 3px rgba(0,0,0,0.55);
 display: inline-block;
 transition: transform 0.3s ease-in-out;
+
+&:hover {
+  transform: scale(1.05);
+
+  .artist-info {
+    height: 100%;
+    background-color: ${COLORS.WHITE};
+
+    p {
+      color: ${COLORS.BLACK};
+    }
+  }
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: ${COLORS.WHITE + "c0"};
+  transition: all 0.3s ease-in-out;
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: ${COLORS.BLACK};
+    margin: 0 auto;
+    font-family: ${FONT_FAMILIES.INFO};
+    text-decoration: none;
+  }
+}
+
+`
+
+export const ProductList = styled(Link)`
+display: flex;
+position: relative;
+width: 300px;
+height: 300px;
+margin: 60px;
+-webkit-box-shadow: 0px -1px 9px 3px rgba(0,0,0,0.55);
+box-shadow: 0px -1px 9px 3px rgba(0,0,0,0.55);
+display: inline-block;
+transition: transform 0.3s ease-in-out;
+overflow: hidden;
+border-radius: 20px;
+Img {
+  border-radius: 20px;
+}
 
 &:hover {
   transform: scale(1.05);

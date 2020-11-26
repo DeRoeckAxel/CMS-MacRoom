@@ -8,7 +8,7 @@ export const Image = styled(Img)`
 
 export const HeaderWrapper = styled.header`
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
