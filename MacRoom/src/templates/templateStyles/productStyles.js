@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
-import { COLORS, FONT_FAMILIES, MEDIA_QUERIES } from "../../constants"
+import { COLORS, FONT_FAMILIES } from "../../constants"
 
 export const Container = styled.div`
   background-color: ${COLORS.BLACK};
