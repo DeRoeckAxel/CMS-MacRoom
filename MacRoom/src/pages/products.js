@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Container, Image, ProductList } from "./pageStyles/pageStyles"
+import { Container, Image, Product } from "../pageStyles/pageStyles"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
@@ -47,7 +47,7 @@ const ProductsPage = () => {
                   sourceUrl
                   imageFile {
                     childImageSharp {
-                      fluid(quality: 100) {
+                      fluid(quality: 50) {
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }
@@ -75,12 +75,12 @@ const ProductsPage = () => {
         <h1>{productsDescription}</h1>
           <div className="product-items">
             {products.map(({node: {product, slug}}) => (
-              <ProductList to={`/${slug}`} key={slug}>
+              <Product to={`/${slug}`} key={slug}>
                 <Image fluid={product.productImage.imageFile.childImageSharp.fluid} altText={product.productImage.altText} />
                 <div className="product-info">
                   <h3>{product.productName}</h3>
                 </div>
-              </ProductList>
+              </Product>
             ))}
           </div>
         </div>

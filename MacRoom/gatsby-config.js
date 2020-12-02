@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,13 +35,6 @@ module.exports = {
         typeName: "WPGraphql",
         fieldName: "wpcontent",
         url: "http://macroom.local/graphql",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Raleway`, `Helvetica`],
-        display: "swap",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

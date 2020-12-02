@@ -1,5 +1,5 @@
 export const FONT_FAMILIES = {
-  TITLE: "Raleway",
+  TITLE: "Arial",
   INFO: "Helvetica",
 }
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Container, Image, Product } from "./pageStyles/pageStyles"
+import { Container, Image, Product } from "../pageStyles/pageStyles"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
@@ -77,7 +77,7 @@ const IndexPage = () => {
       <div className="products">
         <div className="product-items">
         {homePageFeaturedProducts.map(({product, slug}) => (
-          <Product to={`/${slug}`} key={slug}>
+          <Product style={{top: '-200px'}} to={`/${slug}`} key={slug}>
           <Image fluid={product.productImage.imageFile.childImageSharp.fluid} alt={product.productImage.altText} />
             <div className="product-info">
               <h3>{product.productName}</h3>
