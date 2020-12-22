@@ -68,6 +68,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Container>
       <div className="banner">
+
         <Image fluid={homePageHeaderImage.imageFile.childImageSharp.fluid} alt={homePageHeaderImage.altText} />
         <div className="inner-div">
           <p className="header-title">{homePageTitle}</p>
